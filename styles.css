@@ -638,6 +638,70 @@ h3 {
   margin-top: 20px;
 }
 
+.tip-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.tip-card,
+.note-example {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.tip-card h3,
+.note-example h3 {
+  font-size: 1.05rem;
+}
+
+.tip-card p,
+.note-example p {
+  margin-top: 10px;
+}
+
+.do-dont-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.do-dont-grid > div {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.do-dont-grid h3 {
+  font-size: 1.08rem;
+}
+
+.check-list {
+  display: grid;
+  gap: 10px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 24px;
+}
+
+.check-list li::before {
+  position: absolute;
+  top: 0.05rem;
+  left: 0;
+  color: var(--teal);
+  content: "✓";
+  font-weight: 900;
+}
+
 .step {
   display: grid;
   grid-template-columns: 52px minmax(0, 1fr);
@@ -808,6 +872,8 @@ details p {
 
   .quick-facts,
   .partner-grid,
+  .tip-grid,
+  .do-dont-grid,
   .article-teaser,
   .page-layout {
     grid-template-columns: 1fr;
