@@ -320,6 +320,34 @@ h3 {
   font-weight: 850;
 }
 
+.article-teaser {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.article-teaser img {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
+}
+
+.article-teaser div {
+  display: grid;
+  align-content: center;
+  padding: 28px;
+}
+
+.article-teaser p {
+  margin: 12px 0 0;
+  color: var(--muted);
+}
+
 .card p,
 .step p,
 .note p,
@@ -661,6 +689,7 @@ details p {
 
   .quick-facts,
   .partner-grid,
+  .article-teaser,
   .page-layout {
     grid-template-columns: 1fr;
   }
@@ -671,6 +700,11 @@ details p {
 
   .partner-card img {
     height: 320px;
+    min-height: 0;
+  }
+
+  .article-teaser img {
+    height: 280px;
     min-height: 0;
   }
 
